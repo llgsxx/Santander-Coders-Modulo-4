@@ -2,14 +2,14 @@
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
 }
 
-*{
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
-main{
+main {
   display: grid;
   width: 100%;
   height: 100vh;
@@ -19,19 +19,19 @@ main{
   padding: 50px;
 }
 
-button{
+button {
   cursor: pointer;
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
 
-button:disabled{
-  background-color: rgb(15, 52, 119)!important;
-  color: #dfdfdf!important;
-  cursor: not-allowed!important;
+button:disabled {
+  background-color: rgb(15, 52, 119) !important;
+  color: #dfdfdf !important;
+  cursor: not-allowed !important;
   opacity: 0.5;
 }
 
-.imagem-forca{
+.imagem-forca {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -39,16 +39,16 @@ button:disabled{
   height: 100%;
 }
 
-.container-header-forca{
+.container-header-forca {
   position: relative;
 }
 
-.imagem-forca .container-header-forca .imagem-estrutura-forca img{
+.imagem-forca .container-header-forca .imagem-estrutura-forca img {
   width: 250px;
   height: 250px;
 }
 
-.container-header-forca .imagem-cabeca img{
+.container-header-forca .imagem-cabeca img {
   width: 80px;
   height: 80px;
   position: absolute;
@@ -57,7 +57,7 @@ button:disabled{
   z-index: 99;
 }
 
-.container-header-forca .imagem-tronco img{
+.container-header-forca .imagem-tronco img {
   width: 100px;
   height: 100px;
   position: absolute;
@@ -65,7 +65,7 @@ button:disabled{
   left: 21%;
 }
 
-.container-header-forca .imagem-braco-direito img{
+.container-header-forca .imagem-braco-direito img {
   width: 60px;
   height: 60px;
   position: absolute;
@@ -73,7 +73,7 @@ button:disabled{
   left: 35%;
 }
 
-.container-header-forca .imagem-braco-esquerdo img{
+.container-header-forca .imagem-braco-esquerdo img {
   width: 60px;
   height: 60px;
   position: absolute;
@@ -81,7 +81,7 @@ button:disabled{
   left: 13%;
 }
 
-.container-header-forca .imagem-perna-direita img{
+.container-header-forca .imagem-perna-direita img {
   width: 90px;
   height: 90px;
   position: absolute;
@@ -89,7 +89,7 @@ button:disabled{
   left: 33%;
 }
 
-.container-header-forca .imagem-perna-esquerda img{
+.container-header-forca .imagem-perna-esquerda img {
   width: 90px;
   height: 90px;
   position: absolute;
@@ -97,14 +97,14 @@ button:disabled{
   left: 12%;
 }
 
-.letras-forca{
+.letras-forca {
   display: flex;
   gap: 12px;
 }
 
-.letras-forca .input-letra-forca{
+.letras-forca .input-letra-forca {
   width: 33%;
-  border-top: none ;
+  border-top: none;
   border-left: none;
   border-right: none;
   border-bottom: 3px solid black;
@@ -114,54 +114,61 @@ button:disabled{
   text-align: center;
 }
 
-.letras-forca .input-letra-forca:focus-visible{
+.letras-forca .input-letra-forca:focus-visible {
   outline: none;
 }
 
-.container-forca{
+.container-forca {
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
   height: 100%;
 }
 
-.container-input-palavra{
+.container-input-palavra {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 12px;
 }
 
-.container-input-palavra input{
+.container-input-palavra input {
   padding: 10px;
   border-radius: 8px;
   width: 60%;
+  border: 1px solid #ccc;
+  outline: 1px solid #ccc;
 }
 
-.container-input-palavra button{
+.container-input-palavra button {
   background-color: #1be914;
   color: #fff;
   border: none;
   border-radius: 8px;
   padding: 8px 0;
   width: 30%;
-
+  transition: 0.3s;
   font-size: 1.2rem;
 }
 
-.texto-dica{
+.container-input-palavra button:hover {
+  opacity: 0.5;
+  transition: 0.3s;
+}
+
+.texto-dica {
   font-size: 2rem;
   text-align: center;
 }
 
-.teclado{
+.teclado {
   display: flex;
   gap: 8px;
   flex-wrap: wrap;
   justify-content: center;
 }
 
-.teclado button{
+.teclado button {
   padding: 12px 26px;
   border: none;
   background-color: rgb(18, 92, 230);
