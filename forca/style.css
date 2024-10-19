@@ -1,0 +1,170 @@
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+main{
+  display: grid;
+  width: 100%;
+  height: 100vh;
+  grid-template-columns: 1fr 1fr;
+  justify-content: center;
+  align-items: center;
+  padding: 50px;
+}
+
+button{
+  cursor: pointer;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+button:disabled{
+  background-color: rgb(15, 52, 119)!important;
+  color: #dfdfdf!important;
+  cursor: not-allowed!important;
+  opacity: 0.5;
+}
+
+.imagem-forca{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 100%;
+  height: 100%;
+}
+
+.container-header-forca{
+  position: relative;
+}
+
+.imagem-forca .container-header-forca .imagem-estrutura-forca img{
+  width: 250px;
+  height: 250px;
+}
+
+.container-header-forca .imagem-cabeca img{
+  width: 80px;
+  height: 80px;
+  position: absolute;
+  top: 40%;
+  left: 22%;
+  z-index: 99;
+}
+
+.container-header-forca .imagem-tronco img{
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  top: 70%;
+  left: 21%;
+}
+
+.container-header-forca .imagem-braco-direito img{
+  width: 60px;
+  height: 60px;
+  position: absolute;
+  top: 72%;
+  left: 35%;
+}
+
+.container-header-forca .imagem-braco-esquerdo img{
+  width: 60px;
+  height: 60px;
+  position: absolute;
+  top: 72%;
+  left: 13%;
+}
+
+.container-header-forca .imagem-perna-direita img{
+  width: 90px;
+  height: 90px;
+  position: absolute;
+  top: 105%;
+  left: 33%;
+}
+
+.container-header-forca .imagem-perna-esquerda img{
+  width: 90px;
+  height: 90px;
+  position: absolute;
+  top: 105%;
+  left: 12%;
+}
+
+.letras-forca{
+  display: flex;
+  gap: 12px;
+}
+
+.letras-forca .input-letra-forca{
+  width: 33%;
+  border-top: none ;
+  border-left: none;
+  border-right: none;
+  border-bottom: 3px solid black;
+  padding: 10px 3px;
+
+  font-size: 1.2rem;
+  text-align: center;
+}
+
+.letras-forca .input-letra-forca:focus-visible{
+  outline: none;
+}
+
+.container-forca{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  height: 100%;
+}
+
+.container-input-palavra{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+
+.container-input-palavra input{
+  padding: 10px;
+  border-radius: 8px;
+  width: 60%;
+}
+
+.container-input-palavra button{
+  background-color: #1be914;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 8px 0;
+  width: 30%;
+
+  font-size: 1.2rem;
+}
+
+.texto-dica{
+  font-size: 2rem;
+  text-align: center;
+}
+
+.teclado{
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.teclado button{
+  padding: 12px 26px;
+  border: none;
+  background-color: rgb(18, 92, 230);
+  color: #fff;
+  border-radius: 8px;
+}
