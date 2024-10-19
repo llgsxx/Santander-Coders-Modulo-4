@@ -166,6 +166,7 @@ button:disabled {
   gap: 8px;
   flex-wrap: wrap;
   justify-content: center;
+  padding-top: 1rem;
 }
 
 .teclado button {
