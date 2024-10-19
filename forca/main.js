@@ -1,5 +1,5 @@
 import { renderizaButtons } from "./js/renderizaButtons";
-import { puxarPalavras } from "./js/api";
+import { mostrarDica } from "./js/puxarDica";
 
 renderizaButtons();
-puxarPalavras();
+mostrarDica();
