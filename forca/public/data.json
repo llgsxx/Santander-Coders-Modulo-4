@@ -1,4 +1,5 @@
-[
+{
+  "palavras": [
     { "palavra": "banana", "dica": "Fruta amarela" },
     { "palavra": "elefante", "dica": "Mamífero gigante" },
     { "palavra": "oceano", "dica": "Água salgada" },
@@ -77,3 +78,4 @@
     { "palavra": "cafe", "dica": "Bebida estimulante" },
     { "palavra": "palavra", "dica": "Unidade de linguagem" }
   ]
+}
