@@ -1,24 +1,24 @@
 import { puxarPalavras } from "./api";
 
 const textoDica = document.querySelector(".texto-dica");
+const divInputForca = document.querySelector(".letras-forca");
 
-function sorteiaPalavra(dica) {
-  try {
-    const numeroSorteado = Math.floor(Math.random() * dica.length);
-    const dicaSorteada = dica[numeroSorteado];
-    return dicaSorteada;
-  } catch (error) {
-    console.log(error);
-    return "Dica";
-  }
-}
-
-async function puxarDica() {
+async function puxarPalavra() {
   const palavras = await puxarPalavras();
-  const dica = sorteiaPalavra(palavras);
-  return dica;
+  const palavra = sorteiaPalavra(palavras);
+  return palavra;
 }
 
-export async function mostrarDica() {
-  textoDica.textContent = "Dica: " + (await puxarDica()).dica;
+function sorteiaPalavra(palavra) {
+  const numeroSorteado = Math.floor(Math.random() * palavra.length);
+  const dicaSorteada = palavra[numeroSorteado];
+  return dicaSorteada;
+}
+
+export async function mostraPropriedadesDaPalavra() {
+  const palavra = await puxarPalavra();
+  textoDica.textContent = "Dica: " + palavra.dica;
+  for (let i = 0; i < palavra.palavra.length; i++) {
+    divInputForca.innerHTML += `<input class='input-letra-forca' type='text'/>`;
+  }
 }
