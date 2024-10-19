@@ -1,4 +1,4 @@
-const teclado = document.querySelector(".teclado");
+export const teclado = document.querySelector(".teclado");
 const alfabeto = [
   "a",
   "b",
@@ -30,6 +30,6 @@ const alfabeto = [
 
 export function renderizaButtons() {
   alfabeto.forEach(
-    (letra) => (teclado.innerHTML += `<button>${letra}</button>`)
+    (letra) => (teclado.innerHTML += `<button>${letra.toUpperCase()}</button>`)
   );
 }
