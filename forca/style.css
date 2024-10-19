@@ -99,11 +99,14 @@ button:disabled {
 
 .letras-forca {
   display: flex;
+  justify-content: center;
+  word-break: break-all;
   gap: 12px;
+  padding-top: 35%;
 }
 
 .letras-forca .input-letra-forca {
-  width: 33%;
+  width: 8%;
   border-top: none;
   border-left: none;
   border-right: none;

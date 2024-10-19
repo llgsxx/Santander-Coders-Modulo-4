@@ -2,11 +2,11 @@ import { puxarPalavras } from "./api";
 
 const textoDica = document.querySelector(".texto-dica");
 
-function sorteiaDica(dica) {
+function sorteiaPalavra(dica) {
   try {
     const numeroSorteado = Math.floor(Math.random() * dica.length);
     const dicaSorteada = dica[numeroSorteado];
-    return dicaSorteada.dica;
+    return dicaSorteada;
   } catch (error) {
     console.log(error);
     return "Dica";
@@ -15,10 +15,10 @@ function sorteiaDica(dica) {
 
 async function puxarDica() {
   const palavras = await puxarPalavras();
-  const dica = sorteiaDica(palavras);
+  const dica = sorteiaPalavra(palavras);
   return dica;
 }
 
 export async function mostrarDica() {
-  textoDica.textContent = "Dica: " + (await puxarDica());
+  textoDica.textContent = "Dica: " + (await puxarDica()).dica;
 }
