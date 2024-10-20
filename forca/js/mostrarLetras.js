@@ -1,16 +1,18 @@
 import { divInputForca } from "./puxarPalavra";
 import { teclado } from "./renderizaButtons";
 
-export function mostrarLetras(palavra) {
-  console.log(palavra);
-  const arrPalavra = palavra.palavra.split("");
+const letrasEscolhidas = document.querySelector(".letras-escolhidas");
 
+export function mostrarLetras(palavra) {
+  const arrPalavra = palavra.palavra.split("");
   function verificaLetra({ target }) {
-    const letraExiste = arrPalavra.includes(target.textContent.toLowerCase());
+    letrasEscolhidas.textContent += `${target.textContent} `;
+
+    const letraExiste = arrPalavra.includes(target.textContent);
     if (!letraExiste) return;
 
     arrPalavra.forEach((item) => {
-      if (item === target.textContent.toLowerCase()) {
+      if (item === target.textContent) {
         const indexItem = arrPalavra.indexOf(item);
         arrPalavra.splice(indexItem, 1, "");
         divInputForca.childNodes[indexItem].value = item;

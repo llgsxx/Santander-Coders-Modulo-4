@@ -33,7 +33,7 @@ const alfabeto = [
 export function renderizaButtons() {
   teclado.innerHTML = "";
   alfabeto.forEach(
-    (letra) => (teclado.innerHTML += `<button>${letra.toUpperCase()}</button>`)
+    (letra) => (teclado.innerHTML += `<button>${letra}</button>`)
   );
   estadoButton();
 }
