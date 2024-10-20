@@ -1,4 +1,5 @@
 import { puxarPalavras } from "./api";
+import { identificaUser } from "./vidaUsuario";
 
 const textoDica = document.querySelector(".texto-dica");
 const divInputForca = document.querySelector(".letras-forca");
@@ -19,6 +20,7 @@ function sorteiaPalavra(palavra) {
 
 export async function mostraPropriedadesDaPalavra() {
   const palavra = await puxarPalavra();
+  if (!palavra) return;
   textoDica.textContent = "Dica: " + palavra.dica;
   divInputForca.innerHTML = "";
   for (let i = 0; i < palavra.palavra.length; i++) {

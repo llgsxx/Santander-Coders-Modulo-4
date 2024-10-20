@@ -1,5 +1,6 @@
 import { mostraPropriedadesDaPalavra, palavraGlobal } from "./puxarPalavra";
 import { renderizaButtons } from "./renderizaButtons";
+import { user } from "./vidaUsuario";
 
 const inputAcerto = document.querySelector("#palavra");
 const buttonAcerto = document.querySelector(".button-acerto");
@@ -18,6 +19,7 @@ export function verificarAcerto() {
     } else {
       alert("Você errou, portanto, perdeu duas vidas!");
       inputAcerto.value = "";
+      user.life -= 2;
     }
   });
 }
