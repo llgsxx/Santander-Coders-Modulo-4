@@ -1,5 +1,5 @@
 import { puxarPalavras } from "./api";
-import { mostrarLetras } from "./mostrarLetras";
+import { letrasEscolhidas, mostrarLetras } from "./mostrarLetras";
 
 const textoDica = document.querySelector(".texto-dica");
 export const divInputForca = document.querySelector(".letras-forca");
@@ -23,6 +23,7 @@ export async function mostraPropriedadesDaPalavra() {
   if (!palavra) return;
   textoDica.textContent = "Dica: " + palavra.dica;
   divInputForca.innerHTML = "";
+  letrasEscolhidas.textContent = "Letras escolhidas: ";
   for (let i = 0; i < palavra.palavra.length; i++) {
     divInputForca.innerHTML += `<input class='input-letra-forca' readonly type='text' />`;
   }

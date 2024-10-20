@@ -1,7 +1,7 @@
 import { divInputForca } from "./puxarPalavra";
 import { teclado } from "./renderizaButtons";
 
-const letrasEscolhidas = document.querySelector(".letras-escolhidas");
+export const letrasEscolhidas = document.querySelector(".letras-escolhidas");
 
 export function mostrarLetras(palavra) {
   const arrPalavra = palavra.palavra.split("");
