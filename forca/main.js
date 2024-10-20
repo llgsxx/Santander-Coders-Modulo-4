@@ -5,5 +5,4 @@ import { verificarAcerto } from "./js/verificarAcerto";
 
 renderizaButtons();
 mostraPropriedadesDaPalavra();
-estadoButton();
 verificarAcerto();

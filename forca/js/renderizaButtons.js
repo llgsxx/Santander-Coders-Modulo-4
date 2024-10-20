@@ -1,3 +1,5 @@
+import { estadoButton } from "./estadoButton";
+
 export const teclado = document.querySelector(".teclado");
 const alfabeto = [
   "a",
@@ -33,4 +35,5 @@ export function renderizaButtons() {
   alfabeto.forEach(
     (letra) => (teclado.innerHTML += `<button>${letra.toUpperCase()}</button>`)
   );
+  estadoButton();
 }
