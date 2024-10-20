@@ -1,8 +1,8 @@
 import { puxarPalavras } from "./api";
-import { identificaUser } from "./vidaUsuario";
+import { mostrarLetras } from "./mostrarLetras";
 
 const textoDica = document.querySelector(".texto-dica");
-const divInputForca = document.querySelector(".letras-forca");
+export const divInputForca = document.querySelector(".letras-forca");
 export let palavraGlobal = "";
 
 async function puxarPalavra() {
@@ -24,6 +24,7 @@ export async function mostraPropriedadesDaPalavra() {
   textoDica.textContent = "Dica: " + palavra.dica;
   divInputForca.innerHTML = "";
   for (let i = 0; i < palavra.palavra.length; i++) {
-    divInputForca.innerHTML += `<input class='input-letra-forca' type='text'/>`;
+    divInputForca.innerHTML += `<input class='input-letra-forca' readonly type='text' />`;
   }
+  mostrarLetras(palavra);
 }

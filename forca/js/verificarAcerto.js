@@ -16,6 +16,7 @@ export function verificarAcerto() {
       inputAcerto.value = "";
       mostraPropriedadesDaPalavra();
       renderizaButtons();
+      user.life = 5;
     } else {
       alert("Você errou, portanto, perdeu duas vidas!");
       inputAcerto.value = "";
