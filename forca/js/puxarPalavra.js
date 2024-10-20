@@ -18,6 +18,7 @@ function sorteiaPalavra(palavra) {
 export async function mostraPropriedadesDaPalavra() {
   const palavra = await puxarPalavra();
   textoDica.textContent = "Dica: " + palavra.dica;
+  divInputForca.innerHTML = "";
   for (let i = 0; i < palavra.palavra.length; i++) {
     divInputForca.innerHTML += `<input class='input-letra-forca' type='text'/>`;
   }
