@@ -9,7 +9,7 @@ export function verificarAcerto() {
     if (!inputAcerto.value)
       return alert("Escreva algo para não perder suas vidas");
 
-    if (inputAcerto.value === palavraGlobal.palavra) {
+    if (inputAcerto.value.toLowerCase() === palavraGlobal.palavra) {
       alert("Parabéns! Você acertou a palavra!");
       inputAcerto.value = "";
       mostraPropriedadesDaPalavra();
