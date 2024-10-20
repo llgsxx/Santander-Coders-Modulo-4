@@ -2,10 +2,12 @@ import { puxarPalavras } from "./api";
 
 const textoDica = document.querySelector(".texto-dica");
 const divInputForca = document.querySelector(".letras-forca");
+export let palavraGlobal = "";
 
 async function puxarPalavra() {
   const palavras = await puxarPalavras();
   const palavra = sorteiaPalavra(palavras);
+  palavraGlobal = palavra;
   return palavra;
 }
 
