@@ -1,4 +1,4 @@
-import { palavraGlobal } from "./puxarPalavra";
+import { mostraPropriedadesDaPalavra, palavraGlobal } from "./puxarPalavra";
 
 const inputAcerto = document.querySelector("#palavra");
 const buttonAcerto = document.querySelector(".button-acerto");
@@ -12,6 +12,7 @@ export function verificarAcerto() {
     if (inputAcerto.value === palavraGlobal.palavra) {
       alert("Parabéns! Você acertou a palavra!");
       inputAcerto.value = "";
+      mostraPropriedadesDaPalavra();
     } else {
       alert("Você errou, portanto, perdeu duas vidas!");
       inputAcerto.value = "";
