@@ -1,5 +1,5 @@
-import { divInputForca } from "./puxarPalavra";
-import { teclado } from "./renderizaButtons";
+import { divInputForca, mostraPropriedadesDaPalavra } from "./puxarPalavra";
+import { renderizaButtons, teclado } from "./renderizaButtons";
 import { user } from "./vidaUsuario";
 
 export const letrasEscolhidas = document.querySelector(".letras-escolhidas");
@@ -26,7 +26,11 @@ export function mostrarLetras(palavra) {
     });
 
     setTimeout(() => {
-      if (arrPalavra.every(arrVazio)) alert("você venceu");
+      if (arrPalavra.every(arrVazio)) {
+        alert("você venceu");
+        mostraPropriedadesDaPalavra();
+        renderizaButtons();
+      }
     }, 500);
   }
 
