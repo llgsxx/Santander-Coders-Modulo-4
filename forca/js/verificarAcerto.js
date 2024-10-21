@@ -18,12 +18,13 @@ export function verificarAcerto() {
       inputAcerto.value = "";
       mostraPropriedadesDaPalavra();
       renderizaButtons();
-      user.life = 5;
+      user.erro = 0;
+      mostrarCorpo(user.erro);
     } else {
       alert("Você errou, portanto, perdeu duas vidas!");
       inputAcerto.value = "";
-      user.life -= 2;
-      mostrarCorpo();
+      user.erro += 2;
+      mostrarCorpo(user.erro);
     }
   });
 }

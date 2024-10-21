@@ -1,3 +1,4 @@
+import { mostrarCorpo } from "./mostrarCorpo";
 import { divInputForca, mostraPropriedadesDaPalavra } from "./puxarPalavra";
 import { renderizaButtons, teclado } from "./renderizaButtons";
 import { user } from "./vidaUsuario";
@@ -13,7 +14,8 @@ export function mostrarLetras(palavra) {
 
     const letraExiste = arrPalavra.includes(target.textContent);
     if (!letraExiste) {
-      user.life -= 1;
+      user.erro += 1;
+      mostrarCorpo(user.erro);
       return;
     }
 
@@ -30,6 +32,8 @@ export function mostrarLetras(palavra) {
         alert("você venceu");
         mostraPropriedadesDaPalavra();
         renderizaButtons();
+        user.erro = 0;
+        mostrarCorpo(user.erro);
       }
     }, 500);
   }

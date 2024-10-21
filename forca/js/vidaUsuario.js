@@ -1,6 +1,6 @@
 export const user = {
   name: "",
-  life: 5,
+  erro: 0,
 };
 
 export function identificaUser() {
