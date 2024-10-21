@@ -1,9 +1,9 @@
 import { renderizaButtons } from "./js/renderizaButtons";
 import { mostraPropriedadesDaPalavra } from "./js/puxarPalavra";
-import { estadoButton } from "./js/estadoButton";
 import { verificarAcerto } from "./js/verificarAcerto";
+import { identificaUser } from "./js/vidaUsuario";
 
 renderizaButtons();
 mostraPropriedadesDaPalavra();
-estadoButton();
 verificarAcerto();
+identificaUser();

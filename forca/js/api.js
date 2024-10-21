@@ -4,6 +4,6 @@ export async function puxarPalavras() {
     const { palavras } = await response.json();
     return palavras;
   } catch (error) {
-    console.log(error);
+    console.log(error.message);
   }
 }

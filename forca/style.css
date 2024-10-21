@@ -185,3 +185,7 @@ button:disabled {
   color: #fff;
   border-radius: 8px;
 }
+
+.d-none {
+  display: none;
+}
