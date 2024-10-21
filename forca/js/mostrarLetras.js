@@ -5,6 +5,8 @@ export const letrasEscolhidas = document.querySelector(".letras-escolhidas");
 
 export function mostrarLetras(palavra) {
   const arrPalavra = palavra.palavra.split("");
+  const arrVazio = (elemento) => elemento === "";
+
   function verificaLetra({ target }) {
     letrasEscolhidas.textContent += `${target.textContent} `;
 
@@ -18,6 +20,10 @@ export function mostrarLetras(palavra) {
         divInputForca.childNodes[indexItem].value = item;
       }
     });
+
+    setTimeout(() => {
+      if (arrPalavra.every(arrVazio)) alert("você venceu");
+    }, 500);
   }
 
   teclado.childNodes.forEach((button) =>
