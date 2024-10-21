@@ -10,9 +10,7 @@ export function mostrarCorpo(erro) {
     imgDivForca.forEach((img) => img.classList.add("d-none"));
     return;
   }
-  for (let i = 0; i < erro; i++) {
-    imgDivForca[i].classList.remove("d-none");
-  }
+
   if (erro > 5) {
     setTimeout(() => {
       alert("Você perdeu");
@@ -22,5 +20,8 @@ export function mostrarCorpo(erro) {
       user.erro = 0;
       return;
     }, 500);
+  }
+  for (let i = 0; i < erro; i++) {
+    imgDivForca[i].classList.remove("d-none");
   }
 }
