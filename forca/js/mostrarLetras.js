@@ -1,5 +1,6 @@
 import { divInputForca } from "./puxarPalavra";
 import { teclado } from "./renderizaButtons";
+import { user } from "./vidaUsuario";
 
 export const letrasEscolhidas = document.querySelector(".letras-escolhidas");
 
@@ -11,7 +12,10 @@ export function mostrarLetras(palavra) {
     letrasEscolhidas.textContent += `${target.textContent} `;
 
     const letraExiste = arrPalavra.includes(target.textContent);
-    if (!letraExiste) return;
+    if (!letraExiste) {
+      user.life -= 1;
+      return;
+    }
 
     arrPalavra.forEach((item) => {
       if (item === target.textContent) {
