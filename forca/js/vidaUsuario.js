@@ -4,7 +4,12 @@ export const user = {
 };
 
 export function identificaUser() {
-  const nome = prompt("Insira seu nome:");
-  alert("Bem vindo(a) " + nome);
-  user.name = nome;
+  if (sessionStorage.getItem("nameUser")) return;
+  setTimeout(() => {
+    const nome = prompt("Insira seu nome:");
+    if (!nome) return identificaUser();
+    alert("Bem vindo(a) " + nome);
+    user.name = nome;
+    sessionStorage.setItem("nameUser", user.name);
+  }, 200);
 }
